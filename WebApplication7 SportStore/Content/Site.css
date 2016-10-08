@@ -1,18 +1,82 @@
-﻿body {
-    padding-top: 50px;
+﻿BODY
+{
+font-family: Cambria, Georgia, "Times New Roman";
+margin: 0;
+}
+DIV#header DIV.title, DIV.item H3, DIV.item H4, DIV.pager A
+{
+font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+}
+DIV#header
+{
+background-color: #ff0000;/*цвет хедера сайта*/
+border-bottom: 20px solid #006cff;/*цвет полосы под хедером*/
+color: gold;/*цвет надписи на хедере*/
+}
+DIV#header DIV.title
+{
+font-size: 2em;/*Размер шрифта на хедере*/
+padding: .9em;/*ширина поля хедера*/
+}
+DIV#content/*надписи под хедером о товаре*/
+{
+border-left: 2px solid red;/*полоска, разделяющая поле под хедером*/
+margin-left: 9em;/*положение полоски (высота шрифта)*/
+padding: 2em;/*отступ от хедера*/
+}
+DIV#categories/*категории товаров (слева от товаров)*/
+{
+float: left;
+width: 8em;
+padding: .3em;
+}
+DIV.item/*товар*/
+{
+border-top: 5px dotted blue;/*Точки для отступа между элементами*/
+padding-top: .7em;/*Растояние между элементами ( сверху)*/
+margin-bottom: .7em;/*снизу*/
+}
+DIV.item:first-child
+{
+border-top: none;
+padding-top: 0;
+}
+DIV.item H3
+{
+font-size: 1.3em;
+margin: 0 0 .25em 0;
+}
+DIV.item H4
+{
+font-size: 1.1em;
+margin: .4em 0 0 0;
+}
+DIV.pager/*подчеркивание под товарами*/
+{
+text-align: right;
+border-top: 2px solid silver;
+padding: .5em 0 0 0;
+margin-top: 1em;
+}
+DIV.pager A/*возможные страницы*/
+{
+font-size: 1.1em;/*размер шрифта*/
+color: blue;
+text-decoration: underline;/*подчеркивание*/
+padding: 0 .4em 0 .4em;/*положение*/
+}
+DIV.pager A:hover/*цвет выделения мушкой другой страницы*/
+{
+background-color: gold;
+}
+DIV.pager A.selected/*выбранная страница*/
+{
+background-color: #ff0000;
+color: White;
+}
+
+body {/*начальное положение страницы + цвет*/
+    padding-top: 10px;
     padding-bottom: 20px;
+    background-color: aliceblue;
 }
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
-
