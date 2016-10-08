@@ -1,14 +1,17 @@
-﻿@model IEnumerable<SportsStore.Domain.Entities.Product>
-
+﻿@model WebApplication7_SportStore.Models.ProductsListViewModel
+@using WebApplication7_SportStore.HtmlHelpers
 @{
     ViewBag.Title = "Products";
 }
-
-@foreach (var p in Model)
+@foreach (var p in Model.Products)
 {
     <div class="item">
-        <h3> @p.Name</h3>
+        <h3>@p.Name </h3>
         @p.Description
         <h4>@p.Price.ToString("c")</h4>
     </div>
 }
+
+<div class="pager">
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+</div>
